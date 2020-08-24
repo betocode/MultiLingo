@@ -1,0 +1,14 @@
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\obj\Debug\netcoreapp2.2\MultiLingo.CrossCutting.csprojAssemblyReference.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\obj\Debug\netcoreapp2.2\MultiLingo.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\obj\Debug\netcoreapp2.2\MultiLingo.CrossCutting.AssemblyInfoInputs.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\obj\Debug\netcoreapp2.2\MultiLingo.CrossCutting.AssemblyInfo.cs
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\bin\Debug\netcoreapp2.2\MultiLingo.CrossCutting.deps.json
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\bin\Debug\netcoreapp2.2\MultiLingo.CrossCutting.dll
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\bin\Debug\netcoreapp2.2\MultiLingo.CrossCutting.pdb
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\bin\Debug\netcoreapp2.2\MultiLingo.Domain.dll
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\bin\Debug\netcoreapp2.2\MultiLingo.Infra.dll
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\bin\Debug\netcoreapp2.2\MultiLingo.Domain.pdb
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\bin\Debug\netcoreapp2.2\MultiLingo.Infra.pdb
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\obj\Debug\netcoreapp2.2\MultiLingo.CrossCutting.csproj.CopyComplete
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\obj\Debug\netcoreapp2.2\MultiLingo.CrossCutting.dll
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.CrossCutting\obj\Debug\netcoreapp2.2\MultiLingo.CrossCutting.pdb

@@ -1,0 +1,12 @@
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\bin\Debug\netcoreapp2.2\MultiLingo.Infra.deps.json
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\bin\Debug\netcoreapp2.2\MultiLingo.Infra.dll
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\bin\Debug\netcoreapp2.2\MultiLingo.Infra.pdb
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\bin\Debug\netcoreapp2.2\MultiLingo.Domain.dll
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\bin\Debug\netcoreapp2.2\MultiLingo.Domain.pdb
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\obj\Debug\netcoreapp2.2\MultiLingo.Infra.csprojAssemblyReference.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\obj\Debug\netcoreapp2.2\MultiLingo.Infra.csproj.CoreCompileInputs.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\obj\Debug\netcoreapp2.2\MultiLingo.Infra.AssemblyInfoInputs.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\obj\Debug\netcoreapp2.2\MultiLingo.Infra.AssemblyInfo.cs
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\obj\Debug\netcoreapp2.2\MultiLingo.Infra.csproj.CopyComplete
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\obj\Debug\netcoreapp2.2\MultiLingo.Infra.dll
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Infra\obj\Debug\netcoreapp2.2\MultiLingo.Infra.pdb

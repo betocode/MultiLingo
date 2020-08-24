@@ -1,0 +1,8 @@
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Domain\bin\Debug\netcoreapp2.2\MultiLingo.Domain.deps.json
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Domain\bin\Debug\netcoreapp2.2\MultiLingo.Domain.dll
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Domain\bin\Debug\netcoreapp2.2\MultiLingo.Domain.pdb
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Domain\obj\Debug\netcoreapp2.2\MultiLingo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Domain\obj\Debug\netcoreapp2.2\MultiLingo.Domain.AssemblyInfoInputs.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Domain\obj\Debug\netcoreapp2.2\MultiLingo.Domain.AssemblyInfo.cs
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Domain\obj\Debug\netcoreapp2.2\MultiLingo.Domain.dll
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Domain\obj\Debug\netcoreapp2.2\MultiLingo.Domain.pdb
