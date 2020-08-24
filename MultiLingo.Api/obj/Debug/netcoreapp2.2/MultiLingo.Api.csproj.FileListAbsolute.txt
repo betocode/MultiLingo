@@ -1,9 +1,3 @@
-C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.csprojAssemblyReference.cache
-C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.csproj.CoreCompileInputs.cache
-C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.RazorAssemblyInfo.cache
-C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.RazorAssemblyInfo.cs
-C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.AssemblyInfoInputs.cache
-C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.AssemblyInfo.cs
 C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\bin\Debug\netcoreapp2.2\appsettings.Development.json
 C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\bin\Debug\netcoreapp2.2\appsettings.json
 C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
@@ -18,6 +12,12 @@ C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\bin\Debug\netcor
 C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\bin\Debug\netcoreapp2.2\MultiLingo.CrossCutting.pdb
 C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\bin\Debug\netcoreapp2.2\MultiLingo.Infra.pdb
 C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\bin\Debug\netcoreapp2.2\MultiLingo.Domain.pdb
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.csprojAssemblyReference.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.csproj.CoreCompileInputs.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.RazorAssemblyInfo.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.RazorAssemblyInfo.cs
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.AssemblyInfoInputs.cache
+C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.AssemblyInfo.cs
 C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.RazorTargetAssemblyInfo.cache
 C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.csproj.CopyComplete
 C:\Users\roberto\Desktop\teste marlin\MultiLingo\MultiLingo.Api\obj\Debug\netcoreapp2.2\MultiLingo.Api.dll
