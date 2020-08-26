@@ -1,4 +1,5 @@
-﻿using MultiLingo.Domain.Arguments.Aluno;
+﻿using Microsoft.EntityFrameworkCore.Internal;
+using MultiLingo.Domain.Arguments.Aluno;
 using MultiLingo.Domain.Entities;
 using MultiLingo.Domain.Interfaces.Repositories;
 using MultiLingo.Domain.Interfaces.Services;
@@ -48,15 +49,18 @@ namespace MultiLingo.Domain.Services
 
         public bool Delete(Guid id)
         {
+
+            var turmas = _repositoryAlunoTurma.SelectAluno(id);
+            if (turmas.Any())
+            {
+                throw new ArgumentException("Aluno não pode ser deletado pois está inserido em uma turma");
+            }
+
             var entity = _repository.SelectById(id);
             entity.Delete();
             _repository.Delete(entity);
-            var turmas = _repositoryAlunoTurma.SelectAluno(id);
-            foreach(var item in turmas)
-            {
-                item.Delete();
-            }
-             _repositoryAlunoTurma.DeleteAluno(turmas);
+           
+           
             return true;
         }
 

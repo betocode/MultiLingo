@@ -69,6 +69,14 @@ namespace MultiLingo.Api.Controllers
                     response.Content = JsonConvert.SerializeObject("Turma Cheia");
                     return response;
                 }
+
+                var checkIfMatriculaExists = _service.CheckIfExists(req.Matricula);
+                if (checkIfMatriculaExists)
+                {
+                    response.StatusCode = (int)HttpStatusCode.BadRequest;
+                    response.Content = JsonConvert.SerializeObject("Matricula já existe");
+                    return response;
+                }
                 var result = _service.Add(req);
                 _uof.Commit();
 
