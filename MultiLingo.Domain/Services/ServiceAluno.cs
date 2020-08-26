@@ -1,12 +1,8 @@
 ﻿using MultiLingo.Domain.Arguments.Aluno;
 using MultiLingo.Domain.Entities;
-using MultiLingo.Domain.Enum;
 using MultiLingo.Domain.Interfaces.Repositories;
 using MultiLingo.Domain.Interfaces.Services;
 using System;
-using System.Collections.Generic;
-using System.Security.Principal;
-using System.Text;
 
 namespace MultiLingo.Domain.Services
 {

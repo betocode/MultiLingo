@@ -1,9 +1,4 @@
-﻿using MultiLingo.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MultiLingo.Domain.Arguments.Turma
+﻿namespace MultiLingo.Domain.Arguments.Turma
 {
     public class AddTurmaResponse
     {

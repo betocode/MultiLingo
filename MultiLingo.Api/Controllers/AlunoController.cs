@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MultiLingo.Domain.Arguments.Aluno;
-using MultiLingo.Domain.Entities;
 using MultiLingo.Domain.Interfaces.Services;
-using MultiLingo.Infra.Persistence;
 using MultiLingo.Infra.Transactions;
 using Newtonsoft.Json;
+using System;
+using System.Net;
 
 namespace MultiLingo.Api.Controllers
 {

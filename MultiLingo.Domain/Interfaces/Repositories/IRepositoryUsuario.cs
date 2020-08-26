@@ -1,8 +1,5 @@
 ﻿using MultiLingo.Domain.Arguments.Usuario;
 using MultiLingo.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MultiLingo.Domain.Interfaces.Repositories
 {
