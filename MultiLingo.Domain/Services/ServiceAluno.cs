@@ -1,5 +1,6 @@
 ﻿using MultiLingo.Domain.Arguments.Aluno;
 using MultiLingo.Domain.Entities;
+using MultiLingo.Domain.Enum;
 using MultiLingo.Domain.Interfaces.Repositories;
 using MultiLingo.Domain.Interfaces.Services;
 using System;
@@ -13,43 +14,77 @@ namespace MultiLingo.Domain.Services
 
     {
         private readonly IRepositoryAluno _repository;
-        public ServiceAluno(IRepositoryAluno repository)
+        private readonly IRepositoryAlunoTurma _repositoryAlunoTurma;
+       
+        public ServiceAluno(IRepositoryAluno repository, IRepositoryAlunoTurma repositoryAlunoTurma)
         {
             _repository = repository;
+            _repositoryAlunoTurma = repositoryAlunoTurma;
         }
         public AddAlunoResponse Add(AddAlunoRequest aluno)
-        {
-            var aln = new Aluno();
-            aln.IdAluno = Guid.NewGuid();
-            aln.IdTurma = aluno.IdTurma;
-            aln.Nome = aluno.Nome;
-            aln.Matricula = aluno.Matricula;
-            aln = _repository.Create(aln);
-
-            var response = new AddAlunoResponse { Nome = aln.Nome };
-            return response;
+        {     
+            var entity = new Aluno(aluno.Nome, aluno.Matricula);
+            entity = _repository.Create(entity);
+            var alunoTurma = new AlunoTurma(entity.IdAluno, aluno.IdTurma);
+            _repositoryAlunoTurma.AddAluno(alunoTurma);
+            return (AddAlunoResponse)entity;
 
         }
 
-        public bool CheckIfExists(Guid id)
+
+
+
+
+        public bool CheckIfExists(string matricula)
         {
-            throw new NotImplementedException();
+            var entity = _repository.SelectByMatricula(matricula);
+            if (entity != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+
+     
 
         public bool Delete(Guid id)
         {
-            throw new NotImplementedException();
+            var entity = _repository.SelectById(id);
+            entity.Delete();
+            _repository.Delete(entity);
+            var turmas = _repositoryAlunoTurma.SelectAluno(id);
+            foreach(var item in turmas)
+            {
+                item.Delete();
+            }
+             _repositoryAlunoTurma.DeleteAluno(turmas);
+            return true;
+        }
+
+        public bool DeleteFromTurma(Guid idAluno, Guid idTurma)
+        {
+            var entity = new AlunoTurma(idAluno, idTurma);
+            entity.Delete();
+            _repositoryAlunoTurma.DeleteAlunoTurma(entity);
+            return true;
         }
 
         public EditAlunoResponse Edit(EditAlunoRequest aluno)
         {
-            throw new NotImplementedException();
+       
+            var entity = _repository.SelectById(aluno.IdAluno);
+            entity.ChangeAluno(aluno.Nome, aluno.Matricula);
+            entity = _repository.Update(entity);
+            return (EditAlunoResponse)entity;
         }
 
         public Aluno LoadAlunoById(Guid id)
         {
-            var gid = new Guid();
-            return new Aluno();
+            var entity = _repository.SelectById(id);
+            return entity;
         }
     }
 }

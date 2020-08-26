@@ -8,9 +8,12 @@ namespace MultiLingo.Infra.Persistence
     public class RepositoryTurma : IRepositoryTurma
     {
         private readonly MultiLingoContext _context;
+      
         public RepositoryTurma(MultiLingoContext context)
-        {
+        { 
             _context = context;
+         
+           
         }
         public Turma Create(Turma turma)
         {
@@ -20,14 +23,21 @@ namespace MultiLingo.Infra.Persistence
 
         public bool Delete(Turma turma)
         {
+            //var listTurma = _repositoryAlunoTurma.SelectTurma(turma.IdTurma);
+            //if(listTurma != null)
+            //{
+            //    return false;
+            //}
+
             _context.Turma.Update(turma);
+           
             return true;
 
         }
 
         public Turma Select(Guid id)
         {
-            var turma = _context.Turma.Where(x => x.IdTurma.Equals(id)).FirstOrDefault();
+            var turma = _context.Turma.Where(x => x.IdTurma.Equals(id) && x.IsDeletado == false).FirstOrDefault();
             return turma;
         }
 

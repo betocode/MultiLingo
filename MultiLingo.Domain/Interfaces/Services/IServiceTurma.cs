@@ -10,9 +10,9 @@ namespace MultiLingo.Domain.Interfaces.Services
     {
         List<Turma> LoadAllTurmas();
         Turma LoadTurma(Guid id);
-        AddTurmaRequest Add(AddTurmaResponse turma);
-
-        EditTurmaRequest Edit(EditTurmaResponse turma);
+        AddTurmaResponse Add(AddTurmaRequest turma);
+        bool CheckIfTurmaIsAvailable(Guid idTurma);
+        EditTurmaResponse Edit(EditTurmaRequest turma);
 
         bool Delete(Guid id);
     }

@@ -6,5 +6,6 @@ namespace MultiLingo.Domain.Arguments.Aluno
 {
     public class AlunoResponse
     {
+       
     }
 }

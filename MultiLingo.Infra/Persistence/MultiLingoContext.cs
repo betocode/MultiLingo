@@ -47,6 +47,9 @@ namespace MultiLingo.Infra.Persistence
         // #entities
         public DbSet<Aluno> Aluno { get; set; }
         public DbSet<Turma> Turma { get; set; }
+        public DbSet<AlunoTurma> AlunoTurma { get; set; }
+
+        public DbSet<Usuario> Usuario { get; set; }
 
     }
 }

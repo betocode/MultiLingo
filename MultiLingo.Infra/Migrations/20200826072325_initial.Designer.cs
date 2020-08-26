@@ -10,7 +10,7 @@ using MultiLingo.Infra.Persistence;
 namespace MultiLingo.Infra.Migrations
 {
     [DbContext(typeof(MultiLingoContext))]
-    [Migration("20200824015541_initial")]
+    [Migration("20200826072325_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,12 +26,11 @@ namespace MultiLingo.Infra.Migrations
                     b.Property<Guid>("IdAluno")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("IdTurma");
-
                     b.Property<bool>("IsDeletado");
 
                     b.Property<string>("Matricula")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasMaxLength(200);
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -39,7 +38,7 @@ namespace MultiLingo.Infra.Migrations
 
                     b.HasKey("IdAluno");
 
-                    b.ToTable("Alunos");
+                    b.ToTable("Aluno");
                 });
 
             modelBuilder.Entity("MultiLingo.Domain.Entities.AlunoTurma", b =>
@@ -72,11 +71,31 @@ namespace MultiLingo.Infra.Migrations
 
                     b.Property<bool>("IsDeletado");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(200);
 
                     b.HasKey("IdTurma");
 
-                    b.ToTable("Turmas");
+                    b.ToTable("Turma");
+                });
+
+            modelBuilder.Entity("MultiLingo.Domain.Entities.Usuario", b =>
+                {
+                    b.Property<Guid>("IdUsuario")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasMaxLength(200);
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasMaxLength(200);
+
+                    b.HasKey("IdUsuario");
+
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("MultiLingo.Domain.Entities.AlunoTurma", b =>
@@ -84,12 +103,12 @@ namespace MultiLingo.Infra.Migrations
                     b.HasOne("MultiLingo.Domain.Entities.Aluno", "Aluno")
                         .WithMany("Turmas")
                         .HasForeignKey("IdAluno")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("MultiLingo.Domain.Entities.Turma", "Turma")
                         .WithMany("Alunos")
                         .HasForeignKey("IdTurma")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618
         }

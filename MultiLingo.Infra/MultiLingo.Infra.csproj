@@ -11,13 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Migrations\20200824062427_initial.cs" />
-    <Compile Include="Migrations\20200824062427_initial.Designer.cs" />
+    <Compile Include="Migrations\20200826072325_initial.cs" />
+    <Compile Include="Migrations\20200826072325_initial.Designer.cs" />
     <Compile Include="Migrations\MultiLingoContextModelSnapshot.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Persistence\Map\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -8,31 +8,43 @@ namespace MultiLingo.Infra.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Alunos",
+                name: "Aluno",
                 columns: table => new
                 {
                     IdAluno = table.Column<Guid>(nullable: false),
                     Nome = table.Column<string>(maxLength: 200, nullable: false),
-                    Matricula = table.Column<string>(nullable: false),
-                    IdTurma = table.Column<Guid>(nullable: false),
+                    Matricula = table.Column<string>(maxLength: 200, nullable: false),
                     IsDeletado = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Alunos", x => x.IdAluno);
+                    table.PrimaryKey("PK_Aluno", x => x.IdAluno);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Turmas",
+                name: "Turma",
                 columns: table => new
                 {
                     IdTurma = table.Column<Guid>(nullable: false),
-                    Nome = table.Column<string>(nullable: true),
+                    Nome = table.Column<string>(maxLength: 200, nullable: false),
                     IsDeletado = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Turmas", x => x.IdTurma);
+                    table.PrimaryKey("PK_Turma", x => x.IdTurma);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Usuario",
+                columns: table => new
+                {
+                    IdUsuario = table.Column<Guid>(nullable: false),
+                    Login = table.Column<string>(maxLength: 200, nullable: false),
+                    Senha = table.Column<string>(maxLength: 200, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Usuario", x => x.IdUsuario);
                 });
 
             migrationBuilder.CreateTable(
@@ -51,17 +63,17 @@ namespace MultiLingo.Infra.Migrations
                     table.PrimaryKey("PK_AlunoTurma", x => new { x.IdAluno, x.IdTurma });
                     table.UniqueConstraint("AK_AlunoTurma_IdAlunoTurma", x => x.IdAlunoTurma);
                     table.ForeignKey(
-                        name: "FK_AlunoTurma_Alunos_IdAluno",
+                        name: "FK_AlunoTurma_Aluno_IdAluno",
                         column: x => x.IdAluno,
-                        principalTable: "Alunos",
+                        principalTable: "Aluno",
                         principalColumn: "IdAluno",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_AlunoTurma_Turmas_IdTurma",
+                        name: "FK_AlunoTurma_Turma_IdTurma",
                         column: x => x.IdTurma,
-                        principalTable: "Turmas",
+                        principalTable: "Turma",
                         principalColumn: "IdTurma",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -76,10 +88,13 @@ namespace MultiLingo.Infra.Migrations
                 name: "AlunoTurma");
 
             migrationBuilder.DropTable(
-                name: "Alunos");
+                name: "Usuario");
 
             migrationBuilder.DropTable(
-                name: "Turmas");
+                name: "Aluno");
+
+            migrationBuilder.DropTable(
+                name: "Turma");
         }
     }
 }

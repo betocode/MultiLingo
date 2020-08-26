@@ -24,12 +24,11 @@ namespace MultiLingo.Infra.Migrations
                     b.Property<Guid>("IdAluno")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("IdTurma");
-
                     b.Property<bool>("IsDeletado");
 
                     b.Property<string>("Matricula")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasMaxLength(200);
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -70,11 +69,31 @@ namespace MultiLingo.Infra.Migrations
 
                     b.Property<bool>("IsDeletado");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(200);
 
                     b.HasKey("IdTurma");
 
                     b.ToTable("Turma");
+                });
+
+            modelBuilder.Entity("MultiLingo.Domain.Entities.Usuario", b =>
+                {
+                    b.Property<Guid>("IdUsuario")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasMaxLength(200);
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasMaxLength(200);
+
+                    b.HasKey("IdUsuario");
+
+                    b.ToTable("Usuario");
                 });
 
             modelBuilder.Entity("MultiLingo.Domain.Entities.AlunoTurma", b =>

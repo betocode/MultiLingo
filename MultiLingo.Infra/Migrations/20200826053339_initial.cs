@@ -13,8 +13,7 @@ namespace MultiLingo.Infra.Migrations
                 {
                     IdAluno = table.Column<Guid>(nullable: false),
                     Nome = table.Column<string>(maxLength: 200, nullable: false),
-                    Matricula = table.Column<string>(nullable: false),
-                    IdTurma = table.Column<Guid>(nullable: false),
+                    Matricula = table.Column<string>(maxLength: 200, nullable: false),
                     IsDeletado = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
@@ -27,7 +26,7 @@ namespace MultiLingo.Infra.Migrations
                 columns: table => new
                 {
                     IdTurma = table.Column<Guid>(nullable: false),
-                    Nome = table.Column<string>(nullable: true),
+                    Nome = table.Column<string>(maxLength: 200, nullable: false),
                     IsDeletado = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>

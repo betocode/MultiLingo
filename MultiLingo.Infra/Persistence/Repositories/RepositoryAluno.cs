@@ -10,20 +10,25 @@ namespace MultiLingo.Infra.Persistence
     public class RepositoryAluno : IRepositoryAluno
     {
 
-        protected readonly MultiLingoContext _context;
+        private readonly MultiLingoContext _context;
+    
         public RepositoryAluno(MultiLingoContext context)
         {
             _context = context;
+          
         }
         public Aluno Create(Aluno aluno)
         {
             _context.Aluno.Add(aluno);
+          
             return aluno;
         }
 
         public bool Delete(Aluno aluno)
         {
+
             _context.Aluno.Update(aluno);
+          
             return true;
         }
 
@@ -32,12 +37,17 @@ namespace MultiLingo.Infra.Persistence
             return _context.Aluno.ToList();
         }
 
-        public Aluno SelectById(Guid id)
+        public Aluno SelectByMatricula(string matricula)
         {
-            var aluno = _context.Aluno.Where(x => x.IdAluno.Equals(id)).FirstOrDefault();
-            return aluno;
+            var entity = _context.Aluno.Where(x => x.Matricula.Equals(matricula) && x.IsDeletado.Equals(false)).FirstOrDefault();
+            return entity;
         }
 
+        public Aluno SelectById(Guid id)
+        {
+            var entity = _context.Aluno.Where(x => x.IdAluno.Equals(id)).FirstOrDefault();
+            return entity;
+        }
         public Aluno Update(Aluno aluno)
         {
             _context.Aluno.Update(aluno);

@@ -10,7 +10,7 @@ using MultiLingo.Infra.Persistence;
 namespace MultiLingo.Infra.Migrations
 {
     [DbContext(typeof(MultiLingoContext))]
-    [Migration("20200824062427_initial")]
+    [Migration("20200826053339_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,12 +26,11 @@ namespace MultiLingo.Infra.Migrations
                     b.Property<Guid>("IdAluno")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("IdTurma");
-
                     b.Property<bool>("IsDeletado");
 
                     b.Property<string>("Matricula")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasMaxLength(200);
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -72,7 +71,9 @@ namespace MultiLingo.Infra.Migrations
 
                     b.Property<bool>("IsDeletado");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(200);
 
                     b.HasKey("IdTurma");
 

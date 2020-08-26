@@ -2,6 +2,7 @@
 using MultiLingo.Domain.Interfaces.Repositories;
 
 using MultiLingo.Infra.Persistence;
+using MultiLingo.Infra.Persistence.Repositories;
 
 namespace MultiLingo.CrossCutting.DependencyInjection
 {
@@ -12,6 +13,8 @@ namespace MultiLingo.CrossCutting.DependencyInjection
         {
             services.AddScoped<IRepositoryAluno,RepositoryAluno>();
             services.AddScoped<IRepositoryTurma, RepositoryTurma>();
+            services.AddScoped<IRepositoryAlunoTurma,RepositoryAlunoTurma>();
+            services.AddScoped<IRepositoryUsuario, RepositoryUsuario>();
 
         }
     }
