@@ -23,11 +23,7 @@ namespace MultiLingo.Infra.Persistence
 
         public bool Delete(Turma turma)
         {
-            //var listTurma = _repositoryAlunoTurma.SelectTurma(turma.IdTurma);
-            //if(listTurma != null)
-            //{
-            //    return false;
-            //}
+         
 
             _context.Turma.Update(turma);
            

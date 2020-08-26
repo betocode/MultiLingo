@@ -22,8 +22,7 @@ namespace MultiLingo.Infra.Persistence.Repositories
 
         public void DeleteAlunoTurma(AlunoTurma entity)
         {
-        //    var entity = new AlunoTurma(idAluno, idTurma);
-        //    entity.Delete();
+       
             _context.AlunoTurma.Update(entity);
         }
 
@@ -47,7 +46,7 @@ namespace MultiLingo.Infra.Persistence.Repositories
 
         public List<AlunoTurma> SelectAluno(Guid idAluno)
         {
-            var entity = _context.AlunoTurma.Where(x => x.IdAluno.Equals(idAluno)).ToList();
+            var entity = _context.AlunoTurma.Where(x => x.IdAluno.Equals(idAluno) && x.Ativo).ToList();
             return entity;
         }
 
